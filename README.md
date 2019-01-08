@@ -1,2 +1,2 @@
-# docker-firebase
-Docker image for the Firebase CLI.
+# cloud-builders
+Docker images for Google Cloud Build.
