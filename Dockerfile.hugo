@@ -1,0 +1,9 @@
+FROM debian
+RUN apt-get update
+RUN apt-get install -y ca-certificates curl
+ENV VERSION=0.53
+RUN curl -sSL https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz | tar xvz hugo
+
+FROM gcr.io/distroless/base
+COPY --from=0 /hugo /
+ENTRYPOINT ["/hugo"]

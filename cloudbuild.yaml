@@ -5,7 +5,10 @@ steps:
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/make', '-f', 'Dockerfile.make', '.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/sassc', '-f', 'Dockerfile.sassc', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/hugo', '-f', 'Dockerfile.hugo', '.']
 images:
 - 'gcr.io/$PROJECT_ID/firebase'
 - 'gcr.io/$PROJECT_ID/make'
 - 'gcr.io/$PROJECT_ID/sassc'
+- 'gcr.io/$PROJECT_ID/hugo'
