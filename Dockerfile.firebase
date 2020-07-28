@@ -1,4 +1,4 @@
-FROM gcr.io/cloud-builders/yarn
+FROM node
 
 RUN yarn global add firebase-tools
 
